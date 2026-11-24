@@ -1,4 +1,4 @@
-import type {ItemCreate, ItemPublic, ItemType} from "@/types"
+import type {ItemCreate, ItemType} from "@/types"
 
 interface IHttpClient {
     // getOne: (path: string) => ItemPublic 

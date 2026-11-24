@@ -123,6 +123,19 @@ export default function CreateItem() {
             <Card key={i} size="sm">
               <CardHeader>
                 <CardTitle>{result.stem}</CardTitle>
+                <CardContent>
+                  <ul>
+                    {result.options.map((option) => (
+                      <li key={option} className="list-disc">
+                        {option}
+                      </li>
+                    ))}
+                  </ul>
+                  <p className="">
+                    <span className="font-bold">Answer: </span>
+                    <span>{result.key}</span>
+                  </p>
+                </CardContent>
               </CardHeader>
             </Card>
           ))}

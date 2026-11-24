@@ -40,7 +40,7 @@ class HttpClient implements IHttpClient {
     }
 
     async createMany(type: ItemType, count: number): Promise<ItemCreate[]> {
-        const url = this.baseUrl + `${type.toLowerCase()}/batch?count=${count}`
+        const url = this.baseUrl + `/${type.toLowerCase()}/batch?count=${count}`
         const validated_url = new URL(url)
         const response = await fetch(validated_url.href, {
             method: "POST",
